@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>導覽列</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="../Assets/CSS/navbar.css" />
+    <link rel="stylesheet" href="../Assets/CSS/navbar.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-end fixed-top">
+      <div class="container-fluid">
+        <!-- logo -->
+        <a class="navbar-brand" href="../index.html"
+          ><img width="auto" height="60px" src="../Assets/image/newLogo.png" alt=""
+        /></a>
+
+        <!-- phone.ver -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- computer.ver -->
+        <div class="collapse navbar-collapse" id="linkbar">
+          <ul class="navbar-nav me-auto">
+            <!-- 專案簡介 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">專案簡介</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="../index.html#prjBackground">專案背景/動機</a>
+                <a class="dropdown-item" href="../index.html#prjSpecialist">專案特色</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/Pages/member.html">組員介紹</a>
+              <!-- 組員介紹、心得 -->
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">專案功能</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/Pages/loginAndRegister.html">登入/註冊</a>
+                <a class="dropdown-item" href="/Pages/studyGround.html">讀書圈</a>
+                <a class="dropdown-item" href="/Pages/studyRoom.html">自習室</a>
+                <a class="dropdown-item" href="/Pages/studyDiary.html">讀書札記</a>
+                <a class="dropdown-item" href="/Pages/personalPage.html">個人主頁</a>
+                <hr class="dropdown-divider" />
+                <a class="dropdown-item" href="/Pages/video.html">demo影片</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

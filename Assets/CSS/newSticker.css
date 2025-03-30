@@ -1,0 +1,25 @@
+/* 整體設定 */
+.nsBody {
+  margin: 0;
+  padding: 0;
+  background: #F1F0E9;
+}
+
+.galleryWrapper {
+  overflow: hidden; /* 防止水平滾動條 */
+}
+
+.gallery {
+  display: flex; /* 讓圖片橫向排列 */
+  flex-wrap: nowrap; /* 禁止換行 */
+  width: max-content;
+  padding: 100px 0; /* 上下間距 */
+}
+
+.gallery img {
+  height: 600px; /* 固定高度 */
+  width: auto; /* 寬度根據原始比例自動調整 */
+  object-fit: contain; /* 保持圖片填充且不變形 */
+  margin-right: 5px; /* 圖片之間的間距 */
+  flex-shrink: 0; /* 防止圖片縮小 */
+}

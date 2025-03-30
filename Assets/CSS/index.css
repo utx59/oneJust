@@ -1,0 +1,141 @@
+
+@font-face {
+    font-family: 'genkai';
+    src: url('../fonts/genkai-mincho-2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jf';
+    src: url('../fonts/jf-openhuninn-1.1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #F1F0E9 !important;
+    padding-top: 150px;
+}
+
+.indexcontainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* modal */
+.modal{
+    font-family: 'jf', sans-serif;
+}
+
+span{
+    font-weight: bold;
+    color: #ACC4CF;
+}
+
+/* slogan特效 */
+.shineText{
+    font-family: 'genkai', sans-serif;
+    font-size: 100px !important;
+    text-align: center;
+    font-weight: 1000;
+    margin: 140px;
+    background: linear-gradient(
+        -50deg,
+        #979797 0%,
+        #979797 40%,
+        rgba(255, 255,255, 0.1) 50%,
+        #979797 60%,
+        #979797 100%
+    ) no-repeat;
+    background-size: 300%;
+    color: transparent;
+    background-clip: text;
+    animation: shine 2.5s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 100%;
+        transform: scale(1);
+    }
+    12.5% {
+        transform: scale(1.01);
+    }
+    25% {
+        background-position: 0%;
+        transform: scale(1);
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+h3{
+    text-align: center;
+    padding: 5px;
+    font-family: 'jf', sans-serif;
+}
+
+/* 專案動機與背景 */
+.container{
+    display: flex; /* 將子元素橫向排列 */
+    justify-content: space-around; /* 子元素間的間隔平均分配 */
+    align-items: flex-start; /* 子元素頂端對齊 */
+    gap: 10px; /* 卡片之間的間距 */
+}
+
+.card {
+    font-family: 'jf', sans-serif;
+    width: 570px;
+    margin: 8px auto;
+    margin-bottom: 50px;
+    border-radius: 30px !important; 
+    border: none !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 專案特色 */
+.navbarUL{
+    font-family: 'jf', sans-serif;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.tab-content{
+    font-family: 'jf', sans-serif;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.nav-link {
+    color: #979797 !important;
+}
+
+/* 修改選中標籤（active）的字體顏色 */
+.nav-link.active {
+    color: #ACC4CF !important; /* 設定選中標籤的字體顏色，例如綠色 */
+    font-weight: bold; /* 選中時字體加粗 */
+}
+
+/* newSticker相關css */
+.galleryWrapper {
+    overflow: hidden; /* 防止水平滾動條 */
+}
+
+/* 圖片牆 */
+.gallery {
+    display: flex; /* 讓圖片橫向排列 */
+    flex-wrap: nowrap; /* 禁止換行 */
+    width: max-content;
+    padding: 100px 0; /* 上下間距 */
+}
+  
+.gallery img {
+    height: 600px; /* 固定高度 */
+    width: auto; /* 寬度根據原始比例自動調整 */
+    object-fit: contain; /* 保持圖片填充且不變形 */
+    margin-right: 5px; /* 圖片之間的間距 */
+    flex-shrink: 0; /* 防止圖片縮小 */
+}

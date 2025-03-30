@@ -1,0 +1,128 @@
+
+@font-face {
+    font-family: 'jf';
+    src: url('../fonts/jf-openhuninn-1.1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #F1F0E9 !important;
+    padding-top: 150px;
+}
+
+h3{
+    text-align: center;
+    padding: 15px;
+    font-family: 'jf', sans-serif;
+}
+
+:root {
+    --memcircleradius: 60px;
+}
+
+/* 容器設定 - 使用 Flexbox 將卡片橫向排列 */
+.memcard__container {
+    display: flex; /* 將子元素橫向排列 */
+    justify-content: space-around; /* 子元素間的間隔平均分配 */
+    align-items: flex-start; /* 子元素頂端對齊 */
+    gap: 18px; /* 卡片之間的間距 */
+    flex-wrap: wrap; /* 如果寬度不足，允許換行 */
+    padding: 15px;
+    background-color: #F1F0E9; /* 背景顏色 */
+}
+  
+/* 卡片本體 */
+.memcard {
+    width: 300px;
+    min-height: 360px;
+    background-color: #fff;
+    border-radius: var(--memcircleradius);
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+  
+/* 滑鼠移動至卡片的效果 */
+.memcard:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+  
+/* 卡片內的圖片部分 */
+.memcard__img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    filter: blur(24px); /* 初始模糊效果 */
+    transition: filter 0.4s ease;
+}
+  
+/* 滑鼠移動至卡片時，圖片清晰 */
+.memcard:hover .memcard__img {
+    filter: blur(0);
+}
+  
+/* S 型圓角的白色區塊 - 使用 before 和 after 製作 */
+.memcard__img::before,
+.memcard__img::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+}
+  
+/* 長方形區塊（下半部分） */
+.memcard__img::before {
+    bottom: calc(var(--memcircleradius) * -1);
+    width: 100%;
+    height: calc(var(--memcircleradius) * 2);
+    border-radius: var(--memcircleradius) var(--memcircleradius) 0 0;
+}
+  
+/* 圓形區塊（右上部分） */
+.memcard__img::after {
+    bottom: var(--memcircleradius);
+    right: 0;
+    width: calc(var(--memcircleradius) * 2);
+    height: calc(var(--memcircleradius) * 2);
+    border-radius: 50%;
+    background-color: #fff;
+    background: transparent;
+    box-shadow: var(--memcircleradius) var(--memcircleradius) 0 0 white;
+}
+  
+/* 卡片內的內容部分 */
+.memcard__content {
+    position: relative;
+    bottom: calc(var(--memcircleradius) / 2);
+    margin-inline: 40px;
+    display: grid;
+    grid-template-rows: min-content 0fr;
+    transition: grid-template-rows 0.4s ease;
+    font-family: 'jf', sans-serif;
+}
+  
+/* 卡片內容標題部分 */
+.memcard__content__subheading {
+    font-size: 14px;
+}
+  
+/* 卡片的文字描述 */
+.memcard__content__text {
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 16px;
+    transition: margin 0.4s ease, opacity 0.4s ease;
+    font-family: 'jf', sans-serif;
+}
+  
+/* 滑鼠移動至卡片時，展開文字描述 */
+.memcard:hover .memcard__content {
+    grid-template-rows: min-content 1fr;
+}
+  
+.memcard:hover .memcard__content__text {
+    opacity: 1;
+}
+  
+  

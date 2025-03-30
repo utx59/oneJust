@@ -1,0 +1,35 @@
+
+@font-face {
+    font-family: 'jf';
+    src: url('../fonts/jf-openhuninn-1.1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav{
+    height: 120px;
+}
+
+.navbar{
+    background-color: #C7C3B5;
+    padding-left: 40px !important;
+    font-family: 'jf', sans-serif;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+li a:hover{
+    color: black !important;
+}
+
+.navbar-toggler{
+    background-color:white;
+}
+
+@media (max-width:600px) {
+    nav{
+        height: auto;
+    }
+}

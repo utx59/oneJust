@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo video</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../Assets/CSS/video.css" />
+    <link rel="stylesheet" href="../Assets/CSS/navbar.css" />
+    <link rel="stylesheet" href="../Assets/CSS/footer.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <div id="header">
+      <nav class="navbar navbar-expand-lg navbar-light justify-content-end fixed-top">
+        <div class="container-fluid">
+          <!-- logo -->
+          <a class="navbar-brand" href="../index.html"
+            ><img width="auto" height="60px" src="../Assets/image/newLogo.png" alt=""
+          /></a>
+
+          <!-- phone.ver -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- computer.ver -->
+          <div class="collapse navbar-collapse" id="linkbar">
+            <ul class="navbar-nav me-auto">
+              <!-- 專案簡介 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">專案簡介</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="../index.html#prjBackground">專案背景/動機</a>
+                  <a class="dropdown-item" href="../index.html#prjSpecialist">專案特色</a>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="member.html">組員介紹</a>
+                <!-- 組員介紹、心得 -->
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">專案功能</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="loginAndRegister.html">登入/註冊</a>
+                  <a class="dropdown-item" href="studyGround.html">讀書圈</a>
+                  <a class="dropdown-item" href="studyRoom.html">自習室</a>
+                  <a class="dropdown-item" href="studyDiary.html">讀書札記</a>
+                  <a class="dropdown-item" href="personalPage.html">個人主頁</a>
+                  <hr class="dropdown-divider" />
+                  <a class="dropdown-item" href="video.html">demo影片</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <h3>展示影片</h3>
+
+    <div class="demo">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/SbEJMA_LWmA?si=K06QT4T-EFwgNB_U"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <footer class="footer d-flex justify-content-between align-items-center">
+      <div class="footer-text">
+        <p class="mb-0">© 2024 讀OneJust書 All Rights Reserved.</p>
+        <p class="mb-0">by A08 李亞錡 黃芊華 劉胤苓 沈芋廷</p>
+      </div>
+      <div class="footer-logo-container">
+        <img src="../Assets/image/newLogo.png" alt="Logo" class="footer-logo" />
+      </div>
+      <!-- 程式碼參考 https://codepen.io/NiklasKnaack/details/ByBLaMM -->
+      <canvas id="footerCanvas"></canvas>
+      <script src="../JS/snow.js"></script>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>讀OneJust書</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="./Assets/CSS/index.css" />
+    <link rel="stylesheet" href="./Assets/CSS/navbar.css">
+    <link rel="stylesheet" href="./Assets/CSS/footer.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <div id="header">
+      <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-end fixed-top">
+          <div class="container-fluid">
+            <!-- logo -->
+            <a class="navbar-brand" href="index.html"
+              ><img width="auto" height="60px" src="./Assets/image/newLogo.png" alt=""
+            /></a>
+  
+            <!-- phone.ver -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <!-- computer.ver -->
+            <div class="collapse navbar-collapse" id="linkbar">
+              <ul class="navbar-nav me-auto">
+                <!-- 專案簡介 -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">專案簡介</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#prjBackground">專案背景/動機</a>
+                    <a class="dropdown-item" href="#prjSpecialist">專案特色</a>
+                  </div>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link" href="Pages/member.html">組員介紹</a>
+                  <!-- 組員介紹、心得 -->
+                </li>
+  
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">專案功能</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="Pages/loginAndRegister.html">登入/註冊</a>
+                    <a class="dropdown-item" href="Pages/studyGround.html">讀書圈</a>
+                    <a class="dropdown-item" href="Pages/studyRoom.html">自習室</a>
+                    <a class="dropdown-item" href="Pages/studyDiary.html">讀書札記</a>
+                    <a class="dropdown-item" href="Pages/personalPage.html">個人主頁</a>
+                    <hr class="dropdown-divider" />
+                    <a class="dropdown-item" href="Pages/video.html">demo影片</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </div>
+
+    <!-- modal -->
+    <div class="modal" tabindex="-1" id="myModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">歡迎光臨<span>讀One Just書</span>的網頁！</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>狂賀：讀One Just書於113學年度專題競賽獲得A組<span>第二名</span>！</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 在頁面加載完畢後顯示 modal
+      $(document).ready(function () {
+        $("#myModal").modal("show");
+      });
+    </script>
+
+    <!-- slogan視覺效果 程式碼參考ins@this.web -->
+    <h1 class="shineText">要讀萬卷書<br />不然讀ONE JUST輸！</h1>
+
+    <!-- 背景/動機標題 -->
+    <div class="container">
+      <h3 id="prjBackground">專案背景</h3>
+      <h3 id="prjMovitation">專案動機</h3>
+    </div>
+
+    <!-- 背景/動機卡片 -->
+    <div class="container">
+      <!-- 專案背景卡片 -->
+      <div class="card mt-4">
+        <div class="card-body">
+          <p class="card-text">
+            透過我們的調查，Study with
+            me的讀書形式有兩大痛點，第一點為不願在網路上袒露真實面貌，第二點則為錄製影片、上傳平台手續太過繁瑣；而讀書專注APP則是不能判斷使用者是否有真的專注，以及更多的是以使用者自己點開軟體使用為主，少了同儕社交的渠道，還需要利用其他社群平台進行聯絡。因此，我們發想了虛擬人像視訊自習室以及能夠與書友互動的功能，讓「讀one
+            just書」這款讀書專注APP擁有不露臉但互動性佳的study with
+            me讀書形式，並透過開啟鏡頭判斷是否有持續專注，減少了使用者掛機可能性。
+          </p>
+        </div>
+      </div>
+
+      <!-- 專案動機卡片 -->
+      <div class="card mt-4">
+        <div class="card-body">
+          <p class="card-text">
+            隨著科技的飛速發展，網路深深融入了我們的生活，疫情的爆發更是促使線上學習成為了熱門話題，「Study with
+            Me」這種社交化的讀書方式在高中生和大學生中快速流行，透過網路社交平台，用戶可以觀看他人在視訊直播或錄製影片中的讀書過程，以此激勵自己保持專注，而市面上也越來越多讀書專注打卡APP，然而，有一些人對於這類型的APP持有疑慮，他們認為光是藉由按下「開始專注」的按鈕，並無法確定其他使用者是否真的在讀書，因此我們打算將讀書專注APP結合Study
+            with me，改善兩者的痛點，創造出我們本次的專案──讀one just書。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!-- newSticker 程式碼參考ins@this.web -->
+    <!-- 引入scroll trigger -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <div class="galleryWrapper">
+      <div class="gallery">
+        <img src="./Assets/image/appImage1.png" class="image" />
+        <img src="./Assets/image/appImage2.png" class="image" />
+        <img src="./Assets/image/appImage4.png" class="image" />
+        <img src="./Assets/image/appImage5.png" class="image" />
+        <img src="./Assets/image/appImage6.png" class="image" />
+        <img src="./Assets/image/appImage7.png" class="image" />
+        <img src="./Assets/image/appImage8.png" class="image" />
+        <img src="./Assets/image/appImage12.png" class="image" />
+        <img src="./Assets/image/appImage13.png" class="image" />
+        <img src="./Assets/image/appImage14.png" class="image" />
+        <img src="./Assets/image/appImage15.png" class="image" />
+        <img src="./Assets/image/appImage18.png" class="image" />
+        <img src="./Assets/image/appImage20.png" class="image" />
+        <img src="./Assets/image/appImage21.png" class="image" />
+        <img src="./Assets/image/appImage22.png" class="image" />
+        <img src="./Assets/image/appImage23.png" class="image" />
+        <img src="./Assets/image/appImage26.png" class="image" />
+        <img src="./Assets/image/appImage27.png" class="image" />
+      </div>
+    </div>
+    <script src="JS/newSticker.js"></script>
+
+    <div class="clearfix"></div>
+
+    <!-- 專案特色 -->
+    <div>
+      <h3 id="prjSpecialist">專案特色</h3>
+      <!-- Tabs 按鈕 -->
+      <ul class="nav nav-tabs navbarUL" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="studyroom-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#studyroom-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="studyroom-tab-pane"
+            aria-selected="true"
+          >
+            校園自習室
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="virtual-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#virtual-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="virtual-tab-pane"
+            aria-selected="false"
+          >
+            虛擬人像
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="level-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#level-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="level-tab-pane"
+            aria-selected="false"
+          >
+            等級制度
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="cheers-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#cheers-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="cheers-tab-pane"
+            aria-selected="false"
+          >
+            加油語錄
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tabs 內容 -->
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="studyroom-tab-pane"
+          role="tabpanel"
+          aria-labelledby="studyroom-tab"
+          tabindex="0"
+        >
+          透過會員身分專屬的學校認證功能，每位會員都有專屬的身分銘牌，並且自動劃分至屬於自己學校的自習室，與校友共同學習、交流，為同校學生提供一個獨特的學習社群空間。
+        </div>
+        <div class="tab-pane fade" id="virtual-tab-pane" role="tabpanel" aria-labelledby="virtual-tab" tabindex="0">
+          在功能特色方面，每位用戶都可以挑選在軟體中代表自己的虛擬形象，且系統將依據用戶當前等級解鎖不同的造型選擇，使用者可於升等後挑選自己喜愛的人像圖片，讓個性化的人物風格為使用者增添一份趣味。
+        </div>
+        <div class="tab-pane fade" id="level-tab-pane" role="tabpanel" aria-labelledby="level-tab" tabindex="0">
+          為了維持用戶的讀書習慣，本系統也擬定了升級制度，依據累積的讀書時數作為升級標準，隨著使用者累積的讀書時數增加，便可以不斷提升自己的等級。
+        </div>
+        <div class="tab-pane fade" id="cheers-tab-pane" role="tabpanel" aria-labelledby="cheers-tab" tabindex="0">
+          使用者可於完成系統設定之讀書時數後抽選一條加油語錄，並收納於語錄字典中，這些已抽取的語錄可供使用者於書友便利貼中作加油打氣之用。
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+      <footer class="footer d-flex justify-content-between align-items-center">
+        <div class="footer-text">
+          <p class="mb-0">© 2024 讀OneJust書 All Rights Reserved.</p>
+          <p class="mb-0">by A08 李亞錡 黃芊華 劉胤苓 沈芋廷</p>
+        </div>
+        <div class="footer-logo-container">
+          <img src="./Assets/image/newLogo.png" alt="Logo" class="footer-logo" />
+        </div>
+        <!-- 程式碼參考 https://codepen.io/NiklasKnaack/details/ByBLaMM -->
+        <canvas id="footerCanvas"></canvas>
+        <script src="./JS/snow.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>

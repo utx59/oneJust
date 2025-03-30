@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人主頁介面介紹</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="../Assets/CSS/preview.css" />
+    <link rel="stylesheet" href="../Assets/CSS/navbar.css" />
+    <link rel="stylesheet" href="../Assets/CSS/footer.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <div id="header">
+      <nav class="navbar navbar-expand-lg navbar-light justify-content-end fixed-top">
+        <div class="container-fluid">
+          <!-- logo -->
+          <a class="navbar-brand" href="../index.html"
+            ><img width="auto" height="60px" src="../Assets/image/newLogo.png" alt=""
+          /></a>
+
+          <!-- phone.ver -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#linkbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- computer.ver -->
+          <div class="collapse navbar-collapse" id="linkbar">
+            <ul class="navbar-nav me-auto">
+              <!-- 專案簡介 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">專案簡介</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="../index.html#prjBackground">專案背景/動機</a>
+                  <a class="dropdown-item" href="../index.html#prjSpecialist">專案特色</a>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="member.html">組員介紹</a>
+                <!-- 組員介紹、心得 -->
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">專案功能</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="loginAndRegister.html">登入/註冊</a>
+                  <a class="dropdown-item" href="studyGround.html">讀書圈</a>
+                  <a class="dropdown-item" href="studyRoom.html">自習室</a>
+                  <a class="dropdown-item" href="studyDiary.html">讀書札記</a>
+                  <a class="dropdown-item" href="personalPage.html">個人主頁</a>
+                  <hr class="dropdown-divider" />
+                  <a class="dropdown-item" href="video.html">demo影片</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div>
+      <h3>個人主頁介面展示</h3>
+      <h5>*點選圖片可閱讀功能詳情*</h5>
+      <!-- Carousel Section -->
+      <div id="imageCarousel" class="carousel slide" data-bs-interval="false" data-bs-wrap="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <img
+                src="../Assets/image/appImage5.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 1"
+                onclick="showModal('個人主頁', '通過導覽列進入個人主頁後可以看到此介面。', '../Assets/image/appImage5.png')"
+              />
+              <img
+                src="../Assets/image/appImage6.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 2"
+                onclick="showModal('個人資料', '用戶可以在此介面查看自己的暱稱、身分、專注時長與最高專注等級等。', '../Assets/image/appImage6.png')"
+              />
+              <img
+                src="../Assets/image/appImage7.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 3"
+                onclick="showModal('編輯個人資料', '用戶可以於此介面編輯自己的暱稱、身分、頭貼等基本資料。', '../Assets/image/appImage7.png')"
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                src="../Assets/image/appImage8.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 4"
+                onclick="showModal('我的裝扮', '「我的裝扮」提供用戶選擇自己喜愛的虛擬人像與主頁背景，更換後的虛擬人像將儲存並應用於進入自習室後之代表圖像。', '../Assets/image/appImage8.png')"
+              />
+              <img
+                src="../Assets/image/appImage9.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 5"
+                onclick="showModal('身分銘牌', '此頁面將顯示用戶驗證之學校銘牌，同時提供使用者自定義銘牌。', '../Assets/image/appImage9.png')"
+              />
+              <img
+                src="../Assets/image/appImage10.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 4"
+                onclick="showModal('專注等級', '專注等級將依據使用者讀書累計時長劃分為七級，此頁面將顯示使用者距離下一等級還須專注多久時間。', '../Assets/image/appImage10.png')"
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                src="../Assets/image/appImage11.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 5"
+                onclick="showModal('專注等級說明', '此頁面提供「專注等級」制度之文字說明。', '../Assets/image/appImage11.png')"
+              />
+              <img
+                src="../Assets/image/appImage12.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 5"
+                onclick="showModal('專注日記', '專注日記將顯示日、週、月、季、年之各類讀書時長統計，供用戶定期審視自己的讀書習慣。', '../Assets/image/appImage12.png')"
+              />
+              <img
+                src="../Assets/image/appImage13.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 4"
+                onclick="showModal('白噪音', '白噪音可供習慣於自然環境音中專注的使用者，免於自行尋找白噪音音源。', '../Assets/image/appImage13.png')"
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <img
+                src="../Assets/image/appImage14.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 5"
+                onclick="showModal('語錄字典', '用戶每讀滿3小時即可抽取一條語錄，抽取後的語錄將於畫面中被點亮並存入個人語錄字典中。右上角有顯示可抽取次數，並於抽取後隨之減少。', '../Assets/image/appImage14.png')"
+              />
+              <img
+                src="../Assets/image/appImage19.png"
+                class="appPages d-block w-25 mx-2"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+                alt="Image 5"
+                onclick="showModal('升級會員', '以月付、季付、年付款分類，付款後即可享受會員權益。', '../Assets/image/appImage19.png')"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Modal Section -->
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="imageModalLabel">個人主頁介面介紹</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+              <img id="modalImage" src="" class="img-fluid w-50 me-3" alt="Selected Image" />
+              <div>
+                <h5 id="modalTitle">Image Title</h5>
+                <p id="modalDescription">Image Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom JavaScript -->
+      <script>
+        function showModal(title, description, imageUrl) {
+          document.getElementById("modalTitle").innerText = title;
+          document.getElementById("modalDescription").innerText = description;
+          document.getElementById("modalImage").src = imageUrl;
+        }
+      </script>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+      <footer class="footer d-flex justify-content-between align-items-center">
+        <div class="footer-text">
+          <p class="mb-0">© 2024 讀OneJust書 All Rights Reserved.</p>
+          <p class="mb-0">by A08 李亞錡 黃芊華 劉胤苓 沈芋廷</p>
+        </div>
+        <div class="footer-logo-container">
+          <img src="../Assets/image/newLogo.png" alt="Logo" class="footer-logo" />
+        </div>
+        <!-- 程式碼參考 https://codepen.io/NiklasKnaack/details/ByBLaMM -->
+        <canvas id="footerCanvas"></canvas>
+        <script src="../JS/snow.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>
